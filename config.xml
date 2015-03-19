@@ -1,0 +1,116 @@
+<widget	xmlns				= "http://www.w3.org/ns/widgets"
+				xmlns:gap		= "http://phonegap.com/ns/1.0"
+				xmlns:android	= "http://schemas.android.com/apk/res/android"
+				id					= ""
+				version			= "1.0.1">
+	<name>InGame</name>
+	<description>
+		InGame, the place to talk about the game.
+	</description>
+	<author email="support@2dio.com" href="http://2dio.com">
+		2Dio, Inc.
+	</author>
+	<content src="index.html" />
+	<access origin="*" />
+
+	<gap:platform name="ios" />
+	<gap:platform name="android" />
+	<gap:platform name="winphone" />
+
+	<preference name="phonegap-version" value="3.7.0" />
+
+	<!-- Android SDK Version -->
+	<preference name="android-minSdkVersion" value="16" />
+	<!-- iOS Version -->
+	<preference name="deployment-target" value="6.1" />
+
+	<preference name="orientation" value="portrait" />
+	<gap:config-file platform="ios" parent="UISupportedInterfaceOrientations" mode="replace">
+		<array>
+			<string>UIInterfaceOrientationPortrait</string>
+		</array>
+	</gap:config-file>
+
+	<preference name="fullscreen" value="false" />
+
+	<preference name="target-device" value="universal" />
+	<preference name="detect-data-types" value="false" />
+	<preference name="exit-on-suspend" value="false" />
+	<preference name="KeepRunning" value="true" />
+
+	<preference name="webviewbounce" value="false" />
+	<preference name="UIWebViewBounce" value="false" />
+	<preference name="DisallowOverscroll" value="true" />
+
+	<preference name="BackgroundColor" value="0xff333333"/>
+	<preference name="HideKeyboardFormAccessoryBar" value="true" />
+	<preference name="EnableViewportScale" value="true"/>
+
+	<preference name="StatusBarOverlaysWebView" value="true" />
+	<preference name="StatusBarBackgroundColor" value="#000000" />
+	<preference name="StatusBarStyle" value="lightcontent" />
+
+	<preference name="SplashScreen" value="splash" />
+	<preference name="SplashScreenDelay" value="10000" />
+	<preference name="AutoHideSplashScreen" value="false" />
+
+	<gap:plugin name="com.google.cordova.admob" source="plugins.cordova.io" />
+	<gap:plugin name="com.adobe.plugins.gaplugin" version="2.4.0" />
+    <gap:plugin name="org.apache.cordova.inappbrowser" version="0.5.2" />
+	<gap:plugin name="org.apache.cordova.statusbar" />
+	<gap:plugin name="org.apache.cordova.device" version="0.2.12" />
+	<gap:plugin name="org.apache.cordova.inappbrowser" version="0.5.2" />
+	<gap:plugin name="org.apache.cordova.network-information" version="0.2.12" />
+
+	<feature name="http://api.phonegap.com/1.0/network" />
+
+	<feature name="StatusBar">
+		<param name="ios-package" value="CDVStatusBar" onload="true" />
+	</feature>
+
+	<!--<feature name="Keyboard">
+		<param name="ios-package" value="IonicKeyboard" onload="true" />
+	</feature>-->
+
+	<!-- Keyboard setting for Android -->
+	<gap:config-file platform="android" parent="/manifest/application">
+			<activity android:windowSoftInputMode="adjustPan" />
+	</gap:config-file>
+
+	<!-- Default Icon/Splash -->
+	<icon src="icon.png" />
+
+
+	<!-- iOS 7.0+ Icons -->
+	<!-- iPhone 6 / 6+ -->
+	<icon src="img/icons/ios/icon-60@3x.png" gap:platform="ios" width="180" height="180" />
+	<!-- iPhone / iPod Touch  -->
+	<icon src="img/icons/ios/icon-60.png" gap:platform="ios" width="60" height="60" />
+	<icon src="img/icons/ios/icon-60@2x.png" gap:platform="ios" width="120" height="120" />
+	<!-- iPad -->
+	<icon src="img/icons/ios/icon-76.png" gap:platform="ios" width="76" height="76" />
+	<icon src="img/icons/ios/icon-76@2x.png" gap:platform="ios" width="152" height="152" />
+	<!-- Settings Icon -->
+	<icon src="img/icons/ios/icon-small.png" gap:platform="ios" width="29" height="29" />
+	<icon src="img/icons/ios/icon-small@2x.png" gap:platform="ios" width="58" height="58" />
+	<!-- Spotlight Icon -->
+	<icon src="img/icons/ios/icon-40.png" gap:platform="ios" width="40" height="40" />
+	<icon src="img/icons/ios/icon-40@2x.png" gap:platform="ios" width="80" height="80" />
+
+	<!-- iOS 6.1 Icons -->
+	<!-- iPhone / iPod Touch -->
+	<icon src="img/icons/ios/icon.png" gap:platform="ios" width="57" height="57" />
+	<icon src="img/icons/ios/icon@2x.png" gap:platform="ios" width="114" height="114" />
+	<!-- iPad -->
+	<icon src="img/icons/ios/icon-72.png" gap:platform="ios" width="72" height="72" />
+	<icon src="img/icons/ios/icon-72@2x.png" gap:platform="ios" width="144" height="144" />
+	<!-- iPad Spotlight and Settings Icon -->
+	<icon src="img/icons/ios/icon-50.png" gap:platform="ios" width="50" height="50" />
+	<icon src="img/icons/ios/icon-50@2x.png" gap:platform="ios" width="100" height="100" />
+
+
+	<!-- Windows Icons -->
+	<icon src="img/icons/winphone/icon.png" gap:platform="winphone" />
+	<icon src="img/icons/winphone/tileicon.png" gap:platform="winphone" gap:role="background" />
+
+</widget>
