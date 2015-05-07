@@ -54,12 +54,10 @@
 	<preference name="SplashScreenDelay" value="10000" />
 	<preference name="AutoHideSplashScreen" value="false" />
 
-	<gap:plugin name="com.google.cordova.admob" source="plugins.cordova.io" />
 	<gap:plugin name="com.adobe.plugins.gaplugin" version="2.4.0" />
     <gap:plugin name="org.apache.cordova.inappbrowser" version="0.5.2" />
 	<gap:plugin name="org.apache.cordova.statusbar" />
 	<gap:plugin name="org.apache.cordova.device" version="0.2.12" />
-	<gap:plugin name="org.apache.cordova.inappbrowser" version="0.5.2" />
 	<gap:plugin name="org.apache.cordova.network-information" version="0.2.12" />
 
 	<feature name="http://api.phonegap.com/1.0/network" />
