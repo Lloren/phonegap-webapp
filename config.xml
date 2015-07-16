@@ -17,7 +17,7 @@
 	<gap:platform name="android" />
 	<gap:platform name="winphone" />
 
-	<preference name="phonegap-version" value="3.7.0" />
+	<preference name="phonegap-version" value="cli-5.1.1" />
 
 	<!-- Android SDK Version -->
 	<preference name="android-minSdkVersion" value="16" />
