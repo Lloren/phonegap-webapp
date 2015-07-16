@@ -5,7 +5,10 @@ var loop = false;
 
 function open_window(){
 	win = window.open(base_url, "_blank", "location=no, hidden=yes, EnableViewPortScale=yes");
-	win.addEventListener( "loadstop", function() {
+	win.addEventListener("loadstart", function(e) {
+		alert('loadstart');
+	}
+	win.addEventListener("loadstop", function(e) {
 		alert('loadstop');
 		win.executeScript({ code: "alert('load_stop');" });
 		win.executeScript({ code: "localStorage.setItem('message', '');" });
@@ -30,14 +33,6 @@ function open_window(){
 }
 
 $(function (){
-	window.addEventListener("message", function(event) {
-		alert(event);
-		if (event.origin == base_url && event.data.action) {
-			if (event.data.action == "alert") {
-				alert(event.data.data);
-			}
-		}
-	}, false);
 	if (has_internet){
 		open_window();
 	} else {
