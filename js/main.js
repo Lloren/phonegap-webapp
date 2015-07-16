@@ -4,11 +4,12 @@ var win = false;
 
 function open_window(){
 	win = window.open(base_url, "_blank", "location=no");
-	alert(ret_dump(win));
 	win.addEventListener( "loadstop", function() {
+		alert("loadstop");
 		win.executeScript({ code: "localStorage.setItem('message', '');" });
 		var loop = setInterval(function() {
-			win.executeScript({code: "localStorage.getItem('message')"}, function(values) {
+			alert("loop");
+			win.executeScript({code: "localStorage.getItem('message');"}, function(values) {
 					alert(values);
 					var message = values[0];
 					if (message) {
