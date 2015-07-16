@@ -3,7 +3,7 @@
 var win = false;
 
 function open_window(){
-	win = navigator.app.loadUrl(base_url, {openExternal: true});
+	win = window.open(base_url, "_self", "location=no");
 	win.addEventListener("exit", function (){
 		open_window();
 	});

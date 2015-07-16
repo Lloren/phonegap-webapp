@@ -10,7 +10,7 @@
 	<author email="support@2dio.com" href="http://2dio.com">
 		2Dio, Inc.
 	</author>
-	<content src="http://ingame.notomono.onnix.net" />
+	<content src="index.html" />
 	<access origin="*" />
 
 	<gap:platform name="ios" />
