@@ -4,7 +4,7 @@ var win = false;
 var loop = false;
 
 function open_window(){
-	win = window.open(base_url, "_blank", "location=no");
+	win = window.open(base_url, "_blank", "location=no, EnableViewPortScale=yes");
 	win.addEventListener( "loadstop", function() {
 		alert('loadstop');
 		win.executeScript({ code: "alert('load_stop');" });
