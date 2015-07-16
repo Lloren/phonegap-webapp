@@ -3,7 +3,7 @@
 var win = false;
 
 function open_window(){
-	win = window.open(base_url, "_blank", "location=no");
+	win = window.open(base_url, "_self", "location=no");
 	win.addEventListener("exit", function (){
 		open_window();
 	});
