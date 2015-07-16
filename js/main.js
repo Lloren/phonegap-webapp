@@ -4,10 +4,10 @@ var win = false;
 var loop = false;
 
 function open_window(){
-	win = window.open(base_url, "_system");
+	win = window.open(base_url, "_blank", "location=no, hidden=yes, EnableViewPortScale=yes");
 	win.addEventListener("loadstart", function(e) {
 		alert('loadstart');
-	}
+	});
 	win.addEventListener("loadstop", function(e) {
 		alert('loadstop');
 		win.executeScript({ code: "alert('load_stop');" });
