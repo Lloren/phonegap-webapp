@@ -8,6 +8,7 @@ function open_window(){
 		win.executeScript({ code: "localStorage.setItem('message', '');" });
 		var loop = setInterval(function() {
 			win.executeScript({code: "localStorage.getItem('message')"}, function(values) {
+					alert(values);
 					var message = values[0];
 					if (message) {
 						win.executeScript({ code: "localStorage.setItem('message', '');" });
