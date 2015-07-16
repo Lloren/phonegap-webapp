@@ -11,7 +11,6 @@
 		2Dio, Inc.
 	</author>
 	<content src="index.html" />
-    <access origin="http://ingame.notomono.onnix.net" />
     <access origin="*" />
 
 	<gap:platform name="ios" />

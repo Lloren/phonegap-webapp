@@ -10,7 +10,7 @@ function open_window(){
 }
 
 $(function (){
-	$(window).on("message", function(event) {
+	window.addEventListener("message", function(event) {
 		alert(event);
 		if (event.origin == base_url && event.data.action) {
 			if (event.data.action == "alert") {
