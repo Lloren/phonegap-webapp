@@ -1,13 +1,16 @@
 "use strict"
 
 var win = false;
+var loop = false;
 
 function open_window(){
 	win = window.open(base_url, "_blank", "location=no");
 	win.addEventListener( "loadstop", function() {
+		alert('loadstop');
 		win.executeScript({ code: "alert('load_stop');" });
 		win.executeScript({ code: "localStorage.setItem('message', '');" });
-		var loop = setInterval(function() {
+		clearInterval(loop);
+		loop = setInterval(function() {
 			win.executeScript({code: "localStorage.getItem('message');"}, function(values) {
 					var message = values[0];
 					if (message) {
