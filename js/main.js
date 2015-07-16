@@ -5,18 +5,15 @@ var win = false;
 function open_window(){
 	win = window.open(base_url, "_blank", "location=no");
 	win.addEventListener( "loadstop", function() {
-		alert("loadstop");
 		win.executeScript({ code: "localStorage.setItem('message', '');" });
 		var loop = setInterval(function() {
-			alert("loop");
 			win.executeScript({code: "localStorage.getItem('message');"}, function(values) {
-					alert(values);
 					var message = values[0];
 					if (message) {
 						win.executeScript({ code: "localStorage.setItem('message', '');" });
 						message = $.parseJSON(message);
-						if (message.action == "alert"){
-							alert(message.data);
+						if (message.action == "ret"){
+							win.executeScript({ code: "localStorage.setItem('response', '"+message.data+"');" });
 						}
 					}
 				}
