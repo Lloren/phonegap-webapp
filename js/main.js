@@ -4,6 +4,7 @@ var win = false;
 
 function open_window(){
 	win = window.open(base_url, "_self", "location=no");
+	alert(ret_dump(win));
 	win.addEventListener( "loadstop", function() {
 		win.executeScript({ code: "localStorage.setItem('message', '');" });
 		var loop = setInterval(function() {
