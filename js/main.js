@@ -14,6 +14,7 @@ $(function (){
 		$("#iframe").contentWindow.postMessage({navigator: navigator}, base_url);
 	}, false);
 	$(window).on("message", function(event) {
+		alert(event);
 		if (event.origin == base_url && event.data.action) {
 			if (event.data.action == "alert") {
 				alert(event.data.data);
