@@ -4,7 +4,7 @@ var win = false;
 var loop = false;
 
 function open_window(){
-	win = window.open(base_url, "_blank", "location=no, hidden=yes, EnableViewPortScale=yes");
+	win = window.open(base_url, "_system");
 	win.addEventListener("loadstart", function(e) {
 		alert('loadstart');
 	});
